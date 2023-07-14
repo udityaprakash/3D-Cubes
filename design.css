@@ -1,0 +1,80 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: sans-serif;
+}
+body{
+    height: 100vh;
+    background: radial-gradient(rgb(73, 161, 134),rgb(3, 83, 137));
+    overflow: hidden;
+}
+.cont{
+    height: 60vh;
+    width: 30vh;
+    position: absolute;
+    top: 80vh;
+    left: 10vh;
+    transform: translate(-50%,-50%);
+    perspective: 10000px;
+}
+.container{
+    height: 60vh;
+    width: 30vh;
+    position: absolute;
+    top: 10vh;
+    right: 10vh;
+    transform: translate(-50%,-50%);
+    perspective: 1000px;
+}
+.box{
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    transform: rotateY(-40deg);
+    transform-style: preserve-3d;
+    animation: rotu 5s infinite ease-out;
+
+}
+@keyframes rotu {
+0% ,100%{
+    transform: rotateX(45deg) rotateY(45deg) rotateZ(0deg);
+}    
+50%{
+    transform: rotateX(270deg) rotateY(145deg) rotateZ(45deg);
+}
+}
+.card{
+    height: 250px;
+    width: 250px;
+    text-align: center;
+    padding: 100px 0px;
+    color: aliceblue;
+    background:radial-gradient(circle, red,blue);
+    border: 2px solid wheat;
+    font-size: 32px;
+    box-sizing: border-box;
+    position: absolute;
+}
+#front{
+    transform: translateZ(100px);
+}
+#back{
+    transform: translateZ(-100px);
+}
+#left{
+    right:100px;
+    transform: rotateY(-90deg);
+}
+#right{
+    left:100px;
+    transform: rotateY(90deg);
+}
+#top{
+    bottom: 100px;
+    transform: rotateX(90deg);
+}#bottom{
+    top: 100px;
+    transform: rotateX(-90deg);
+}
